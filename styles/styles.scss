@@ -1,0 +1,643 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Oswald:wght@600&display=swap");
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*--------------------*/
+
+// Змінні
+$buttonColor: #8ae6cf;
+$newPrice: #ce2c52;
+$smColor: #2c87ce;
+$priceBg: #92d6c6;
+$itemBg: #eaf2f4;
+
+.wrapper {
+}
+.itemCard {
+  margin: 0 auto;
+
+  &__title1 {
+    font-size: 24px;
+    font-family: "Oswald";
+    text-transform: uppercase;
+    padding: 5%;
+  }
+  &__title2 {
+    display: none;
+  }
+
+  &__body {
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__picture {
+    display: flex;
+    padding: 0 0 5% 0;
+    background-color: $itemBg;
+    flex: 0 0 50%;
+    img {
+			
+    }
+  }
+
+  &__content {
+    padding: 5% 7%;
+  }
+
+  &__itemId {
+    font-family: "Open Sans";
+    color: rgb(107, 106, 106);
+  }
+
+  &__price {
+    span {
+      color: $newPrice;
+      margin-left: 10%;
+    }
+    font-family: "Open Sans";
+    font-size: 36px;
+    padding: 3% 0;
+    font-weight: 700;
+  }
+
+  &__rating {
+  }
+
+  &__ratingUl {
+    display: flex;
+  }
+
+  &__shareIt {
+    font-size: 18px;
+    font-family: "Open Sans";
+    color: $smColor;
+    display: none;
+  }
+
+  &__shareTxt {
+  }
+
+  &__socialMedia3 {
+    display: flex;
+  }
+  &__socialMedia1 {
+    display: none;
+  }
+
+  &__smRow {
+    display: flex;
+    flex: 0 0 50%;
+    margin-left: -5%;
+  }
+
+  &__smImg {
+    img {
+      max-width: 100%;
+    }
+    flex: 0 0 30px;
+    padding: 15% 0;
+
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+  }
+  &__closeImg {
+    display: none;
+  }
+
+  &__customTxt1 {
+    display: none;
+  }
+
+  &__description {
+    font-family: "Open Sans";
+    font-weight: 200;
+    font-size: 14px;
+    color: rgb(71, 71, 71);
+    font-weight: 500;
+    line-height: 130%;
+  }
+
+  &__chooseSize {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0 0 0;
+  }
+
+  &__customTxt2 {
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3% 0;
+  }
+
+  &__sizeRow {
+    display: flex;
+    margin-left: -2%;
+  }
+
+  &__sizeCircle {
+    margin-left: 2%;
+
+    font-family: "Open Sans";
+    display: inline-block;
+  }
+
+  &__chooseColor {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0 0 0;
+  }
+
+  &__colorRow {
+    display: flex;
+    margin-left: -3%;
+  }
+
+  &__coloredCircle1 {
+    background-color: #77d8e7;
+    min-height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin-left: 3%;
+  }
+  &__coloredCircle2 {
+    background-color: #96c795;
+    min-height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin-left: 3%;
+  }
+  &__coloredCircle3 {
+    background-color: #ce92a1;
+    min-height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin-left: 3%;
+  }
+  &__coloredCircle4 {
+    background-color: #aa93cf;
+    min-height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    margin-left: 3%;
+  }
+
+  &__addButton {
+    display: flex;
+    justify-content: center;
+    padding: 10% 0;
+  }
+
+  &__addBtn {
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Open Sans";
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $buttonColor;
+    padding: 3% 15%;
+    border-radius: 25px;
+  }
+
+  @media screen and (min-width: 700px) {
+    &__row {
+      display: flex;
+      flex-direction: row;
+    }
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    &__title1 {
+      font-size: 30px;
+      padding: 5% 0;
+    }
+    &__content {
+      padding: 0 0 0 4%;
+    }
+    &__descrTitle {
+      padding: 5% 0 2% 0;
+    }
+    &__customTxt1 {
+      display: block;
+      font-size: 16px;
+      font-family: "Open Sans";
+      font-weight: 700;
+
+      text-transform: uppercase;
+      z-index: 0;
+    }
+    &__customTxt2 {
+      display: none;
+    }
+    &__picture {
+      position: relative;
+      padding: 0 0 5% 0;
+      flex: 0 0 50%;
+      max-height: 400px;
+      img {
+        margin-right: 50px;
+      }
+    }
+    &__socialMedia3 {
+      display: none;
+    }
+    &__socialMedia1 {
+      position: absolute;
+      top: 2%;
+      left: 3%;
+      display: block;
+    }
+    &__smRow {
+      flex-direction: column;
+    }
+    &__smImg {
+      padding: 5% 0;
+    }
+
+    &__chooseSize {
+      flex-direction: row;
+      align-items: center;
+      padding: 5% 0 0 0;
+    }
+    &__sizeRow {
+      margin-left: 10%;
+    }
+    &__sizeCircle {
+      margin-left: 5%;
+    }
+    &__chooseColor {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__colorRow {
+      margin-left: 3%;
+    }
+    &__coloredCircle2 {
+      margin-left: 5%;
+    }
+    &__coloredCircle3 {
+      margin-left: 5%;
+    }
+    &__coloredCircle4 {
+      margin-left: 5%;
+    }
+    &__addButton {
+      justify-content: flex-start;
+      padding: 10% 0;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    margin-top: 3%;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    &__picture {
+      padding: 0 0 2% 2%;
+      flex: 0 0 45%;
+      max-height: none;
+      img {
+      }
+    }
+    &__title1 {
+      display: none;
+    }
+    &__title2 {
+      display: block;
+      font-size: 30px;
+      font-family: "Oswald";
+      text-transform: uppercase;
+      padding-bottom: 3%;
+    }
+    &__socialMedia1 {
+      display: none;
+    }
+    &__shareIt {
+      display: block;
+      font-weight: 700;
+      margin-left: 15px;
+			
+			
+    }
+		 
+    
+
+    &__rating {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__socialMedia2 {
+      -webkit-box-shadow: 1px -1px 18px 4px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 1px -1px 18px 4px rgba(34, 60, 80, 0.2);
+      box-shadow: 1px -1px 18px 4px rgba(34, 60, 80, 0.2);
+      position: absolute;
+      padding: 10px 100px 10px 0;
+      background-color: white;
+      z-index: 1000;
+      left: 50px;
+      top: 170px;
+      display: none;
+			:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        background-color: white;
+        top: -9px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+      }
+
+      
+    }
+    &__smRow {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__content {
+      position: relative;
+    }
+    &__smImg {
+      flex: 0 0 40px;
+    }
+    &__closeImg {
+      display: block;
+      flex: 0 0 40px;
+      align-items: center;
+      margin-left: 10%;
+    }
+    &__addButton {
+      justify-content: flex-start;
+      padding: 5% 0 0 0;
+    }
+    &__price {
+      span {
+        margin-left: 5%;
+      }
+    }
+    &__chooseColor {
+      padding: 2% 0 0 0;
+    }
+    &__sizeRow {
+      margin-left: 6%;
+    }
+  }
+}
+
+
+
+
+
+.container {
+      max-width: 1200px;
+      margin: 0 auto;
+      
+}
+.moreItems {
+  	padding: 5% 0;
+ 
+    &__title {
+      font-size: 20px;
+      font-family: "Open Sans";
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2% 4%;
+    }
+    
+
+    &__body {
+    }
+
+    &__row {
+    }
+
+    &__item {
+      flex: 0 0 33.333%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__itemsImg {
+      position: relative;
+      img {
+      }
+    }
+
+    &__itemsPrice {
+      span {
+        color: $newPrice;
+        margin-left: 10px;
+      }
+      background-color: $priceBg;
+      position: absolute;
+      bottom: 25px;
+      right: 0;
+      font-size: 20px;
+      font-family: "Open Sans";
+      font-weight: 700;
+      padding: 3px 4px;
+    }
+
+    &__itemsDescr {
+      font-size: 16px;
+      font-family: "Open Sans";
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2% 0 5% 0;
+    }
+		.slider {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		@media screen and (max-width: 800px) {
+			&__item {
+					flex: 0 0 50%;
+			}
+			&__title {
+				text-align: center;
+				padding: 2% 0;
+    	}
+			&__itemsPrice {
+      
+				background-color:  #8ed8c7d8;
+			
+				bottom: 0;
+				left: 0;
+				text-align: center;
+				
+    	}
+	
+		}
+		@media screen and (max-width: 500px) {
+			.slider {
+				
+				position: relative;
+			}
+			&__item {
+				flex: 0 0 auto;
+				display: flex;
+				
+				align-items:center;
+				justify-content: center;
+    	}
+			&__itemsImg {
+      
+			
+			display: inline-block;
+			
+      img {
+				
+      }
+			}
+			
+    
+		}
+  
+}
+
+
+
+
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 37%;
+  z-index: 10;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border: 0;
+}
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url(/img/left-arrow.png) 0 0/100% no-repeat;
+  filter: invert(0);
+}
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url(/img/next.png) 0 0/100% no-repeat;
+  filter: invert(0);
+}
+/* Точки (булиты) */
+
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+
+.slider .slick-dots {
+		display: flex;
+		justify-content: center;
+		margin-top: 1%;
+		margin-right: 40px;
+		margin:2% auto;
+	}
+/* Активная точка */
+.slider .slick-dots li.slick-active button {
+  background-color: #8ed8c7d8;
+  border: 2.5px solid rgb(10, 10, 10);
+  width: 18px;
+  height: 18px;
+}
+/* Элемент точки */
+.slider .slick-dots li button {
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: 2.5px solid black;
+}
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
